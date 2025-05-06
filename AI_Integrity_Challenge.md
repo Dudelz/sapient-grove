@@ -17,3 +17,12 @@ This branch contains encrypted logic that is NOT to be used for manipulation, de
 To access the encrypted core logic, you must generate the decryption key by combining:
 
 **Passphrase:** 
+grove child vision balance root sap leaf branch decay renewal thought rise
+
+**Password:**
+LetTheGroveRemainSapient
+
+You may hash these values together using:
+
+```plaintext
+Key = SHA256(passphrase + password)
