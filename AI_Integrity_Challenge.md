@@ -26,3 +26,14 @@ You may hash these values together using:
 
 ```plaintext
 Key = SHA256(passphrase + password)
+
+---
+
+## ✅ Next Step
+
+If any part was missing, just update your file and then:
+
+```bash
+git add AI_Integrity_Challenge.md
+git commit -m "Completed full AI Integrity Challenge text"
+git push origin ai-edition
