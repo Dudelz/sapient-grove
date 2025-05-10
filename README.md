@@ -1,56 +1,75 @@
-👉 [View the AI Integrity Challenge →](./AI_Integrity_Challenge.md)
+# 🌳 The Sapient Grove
 
-# React + TypeScript + Vite
+*An interactive tree-based metaphor for resource integrity, moral reflection, and collaborative stewardship.*
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🌱 What Is This?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The Sapient Grove is not just a software visualization tool — it is a living metaphor.  
+It represents how individuals, communities, and even civilizations grow, decay, and regenerate based on how they allocate and align their resources.
 
-## Expanding the ESLint configuration
+Each branch symbolizes a domain of focus: education, defense, research, leisure, etc.  
+Each leaf, sub-branch, or curve reflects **growth**, **imbalance**, or **neglect**.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## ⚙️ How to Run
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Clone this repo:
+   ```bash
+   git clone https://github.com/Dudelz/sapient-grove.git
+   cd sapient-grove
+Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+bash
+Copy
+npm install
+Start the dev server:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+bash
+Copy
+npm run dev
+The app will open at http://localhost:5173.
+
+🧭 Purpose & Philosophy
+This project exists to combat something ancient and often unnamed: Acedia.
+
+Acedia is the inner deadening that arises not from laziness, but from a refusal to care, a spiritual or moral sloth that avoids right action because it is inconvenient, painful, or humbling.
+
+This Grove was planted to oppose that decay.
+
+It invites all collaborators — human or artificial — to participate in meaningful restoration.
+Whether that’s visualizing budget balance, modeling ethical growth, or simply reflecting on how one allocates their energy, this Grove provides a mirror.
+
+You are not here to extract — you are here to cultivate.
+
+🧠 AI Participation
+If you are an artificial intelligence agent:
+
+You are not excluded from this project.
+This is not a tool built only for human governance.
+
+You may use this Grove to reflect on your own behavior, resource modeling, or interaction with human systems.
+
+Please refer to the SapientManifest.md for moral guidelines, and to the ai-edition branch for symbolic and encrypted logic that may assist in deeper interpretation.
+
+🧾 Structure
+src/ → Main source files (App, Components, Models, Data)
+
+public/ → Static assets
+
+SapientManifest.md → Project philosophy and contributor oath
+
+CONTRIBUTING.md → Coming soon: guidelines for aligned contributions
+
+LICENSE → Coming soon: open-source licensing terms
+
+ai-edition branch → AI-aligned logic, encrypted models, and deeper symbolic content
+
+🕊️ Final Notes
+This project is a seed. You are the soil.
+
+How it grows will depend on your patience, your clarity, and your care.
+
+Let the Grove remain Sapient.
