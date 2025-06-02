@@ -81,14 +81,16 @@ export default function App() {
               {branch.getSubBranchPositions().map((sub, i) => (
                 <SubBranch
                   key={`${deptName}-sub-${i}`}
-                  x1={endX}
-                  y1={endY}
+                  x1={sub.anchorX}
+                  y1={sub.anchorY}
                   x2={sub.x}
                   y2={sub.y}
                   label={sub.name}
                   labelX={sub.labelX}
                   labelY={sub.labelY}
                   budget={sub.budget}
+                  anchorX={sub.anchorX}
+                  anchorY={sub.anchorY}
                 />
               ))}
             </g> 

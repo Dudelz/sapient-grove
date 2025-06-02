@@ -48,7 +48,9 @@ export default class BranchModel {
       labelX: number; 
       labelY: number; 
       name: string; 
-      budget: number 
+      budget: number;
+      anchorX: number;
+      anchorY: number;
     }[] {
       const baseRadians = this.getRadians();
       const spacing = 20; // degrees between sub-branches
@@ -64,18 +66,47 @@ export default class BranchModel {
         const y = this.getEndY();
 
         // 🌿 Randomize the spawn point along the last 25% of the branch
-        const variation = 0.75 + Math.random() * 0.25; // 75% to 100% of branch length
-        const anchorX = this.startX + branchLength * variation * Math.cos(baseRadians);
-        const anchorY = this.startY - branchLength * variation * Math.sin(baseRadians); 
+        //const variation = 0.75 + Math.random() * 0.25; // 75% to 100% of branch length
+        const spreadStart = 0.4; // 40% of main branch length
+        const spreadEnd = 0.9;   // 90%
+        const spreadRange = spreadStart + Math.random() * (spreadEnd - spreadStart);
+        const anchorX = this.startX + branchLength * spreadRange * Math.cos(baseRadians);
+        const anchorY = this.startY - branchLength * spreadRange * Math.sin(baseRadians); 
+
+        const branchAngle = baseRadians;
+        // Used to calculate sub-branch angle
+        //const subAngle = radians;
+
+        // Determin if sub-branch angle is clockwise or counter-clockwise compared to main branch angle
+        // const angleDiff = subAngle - branchAngle;
+        // const sideFactor = angleDiff > 0 ? 1 : -1; // Choose side of offset
+        const mainVecX = Math.cos(branchAngle);
+        const mainVecY = -Math.sin(branchAngle);
+
+        const subVecX = Math.cos(radians);
+        const subVecY = -Math.sin(radians);
+
+        // Cross product to determine relative side
+        const cross = mainVecX * subVecY - mainVecY * subVecX;
+        const sideFactor = Math.sign(cross);
 
 
-        // const endX = x + length * Math.cos(radians);
-        // const endY = y - length * Math.sin(radians);
-        // const labelX = x + 20 * Math.cos(radians);
-        // const labelY = y - 20 * Math.sin(radians);
+        // Calculate perpendicular angle
+        const perpAngle = branchAngle + Math.PI / 2; // 90 degrees rotated
+
+        // Offset by half of the branch thickness outward
+        const branchThickness = Math.max(3, this.budget / 10000);
+        const offsetX = sideFactor * (branchThickness / .75) * Math.cos(perpAngle);
+        const offsetY = sideFactor * (branchThickness / .75) * Math.sin(perpAngle);
+
+        //Adjust anchor point outward
+        const finalAnchorX = anchorX + offsetX;
+        const finalAnchorY = anchorY + offsetY;
 
         // 🌿 Calculate sub-branch endpoint from randomized anchor point
-        const subLength = sub.budget / 1000;
+        const baseLength = 90; // minimum length
+        const scaledLength = sub.budget / 500; //scale factor
+        const subLength = Math.max(baseLength, scaledLength);
         const endX = anchorX + subLength * Math.cos(radians);
         const endY = anchorY - subLength * Math.sin(radians);
 
@@ -91,6 +122,8 @@ export default class BranchModel {
           labelY,
           name: sub.name,
           budget: sub.budget,
+          anchorX: finalAnchorX,
+          anchorY: finalAnchorY,
         };
       });
     }

@@ -19,6 +19,7 @@ Each leaf, sub-branch, or curve reflects **growth**, **imbalance**, or **neglect
 1. Clone this repo:
    ```bash
    git clone https://github.com/Dudelz/sapient-grove.git
+<<<<<<< HEAD
    cd sapient-grove
 Install dependencies:
 
@@ -73,3 +74,6 @@ This project is a seed. You are the soil.
 How it grows will depend on your patience, your clarity, and your care.
 
 Let the Grove remain Sapient.
+=======
+   cd sapient-grove
+>>>>>>> 043431a9b351e0c32afa288cd143354c4a4d22c3

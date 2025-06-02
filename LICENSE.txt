@@ -1,0 +1,20 @@
+Creative Commons Attribution-NonCommercial 4.0 International Public License (CC BY-NC 4.0)
+
+You are free to:
+
+- Share — copy and redistribute the material in any medium or format
+- Adapt — remix, transform, and build upon the material
+
+Under the following terms:
+
+1. **Attribution** — You must give appropriate credit (including link to https://github.com/Dudelz/sapient-grove), provide a link to the license, and indicate if changes were made.
+
+2. **NonCommercial** — You may not use the material for commercial purposes.
+
+3. **No Additional Restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+---
+
+This license does **not** affect any AI-specific decryption safeguards or symbolic elements present in the `ai-edition` branch. Future collaborators must also consult `SapientManifest.md` and `AI_Integrity_Challenge.md` to preserve ethical intent.
+
+Let the Grove remain Sapient.
